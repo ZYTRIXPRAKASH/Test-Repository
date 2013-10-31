@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <group android:checkableBehavior="single" >
+        <item
+            android:id="@+id/payment_type_cash"
+            android:title="@string/cash"/>
+        <item
+            android:id="@+id/payment_type_cheque"
+            android:title="@string/cheque"/>
+        <item
+            android:id="@+id/payment_type_credit_card"
+            android:title="@string/credit_OR_card"/>
+        <item
+            android:id="@+id/payment_type_propay"
+            android:title="@string/propay"/>
+        <item
+            android:id="@+id/payment_type_other"
+            android:title="@string/other"/>
+    </group>
+
+</menu>

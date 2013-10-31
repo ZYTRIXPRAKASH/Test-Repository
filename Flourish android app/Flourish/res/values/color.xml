@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="dark_income_gray">#6a6a6a</color>
+    <color name="section_startcolor">#aab7c0</color>
+    <color name="section_endcolor">#b9c3cc</color>
+    <color name="section_startcolor_selected">#c4b4c6</color>
+    <color name="section_endcolor_selected">#4f3e51</color>
+    <color name="white">#FFFFFF</color>
+    <color name="blue">#ff2570ba</color>
+    <color name="grey">#f7f7f7</color>
+    <color name="black_color">#000000</color>
+    <color name="divider">#D9DADE</color>
+    <color name="dark_gray">#425e86</color>
+    <color name="line_bg">#E9E6E5</color>
+
+</resources>

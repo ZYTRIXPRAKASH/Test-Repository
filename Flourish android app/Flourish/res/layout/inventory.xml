@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tabBar"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background"
+    
+    
+     >
+
+    <RelativeLayout
+        android:id="@+id/search_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <include
+            android:id="@+id/search_bar_layout"
+            android:layout_above="@id/title_rl"
+         
+            layout="@layout/inventory_search_bar" />
+    </RelativeLayout>
+
+   
+
+    <RelativeLayout
+        android:id="@+id/favourites_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_rl"
+        android:paddingTop="15dp" >
+
+        <TextView
+            android:id="@+id/favourites_txtview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/favourites"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/favourites_txtview"
+            android:layout_margin="2dp">
+            <ListView
+                android:id="@+id/favourites_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/table_shape"
+                android:cacheColorHint="#00000000"
+                android:fastScrollEnabled="true" >
+            </ListView>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

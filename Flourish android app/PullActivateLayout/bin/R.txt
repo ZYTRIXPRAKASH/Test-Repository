@@ -1,0 +1,7 @@
+int attr actionViewId 0x7f010000
+int attr toolViewId 0x7f010001
+int id action_view 0x7f020000
+int id tool_view 0x7f020001
+int[] styleable PullActivateLayout { 0x7f010000, 0x7f010001 }
+int styleable PullActivateLayout_actionViewId 0
+int styleable PullActivateLayout_toolViewId 1

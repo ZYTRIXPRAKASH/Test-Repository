@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/money_rl"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background" >
+
+    <RelativeLayout
+        android:id="@+id/money_top_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/money_top_bg" >
+
+        <LinearLayout
+            android:id="@+id/money_top_bar_rl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:background="@drawable/top_grey_first_selected"
+         
+            
+            
+            >
+
+            <Button
+                android:id="@+id/money_expenses_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/expenses"
+                android:textColor="#ffffff"
+                android:background="@null"
+                android:textStyle="bold"
+                android:layout_weight="1"
+               
+                
+                android:layout_marginLeft="5dp" />
+
+            <Button
+                android:id="@+id/money_income_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/money_expenses_btn"
+                android:text="@string/income"
+                android:textColor="#425e86"
+                android:background="@null"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:layout_marginLeft="5dp" />
+
+            <Button
+                android:layout_marginLeft="15dp"
+                android:id="@+id/money_mileage_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/money_income_btn"
+                android:text="@string/mileage"
+                android:textColor="#425e86"
+                android:background="@null"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/money_expenses_lv"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/money_top_bar"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp" />
+
+    <ListView
+        android:id="@+id/money_mileage_lv"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/money_top_bar"
+        android:visibility="gone"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp" />
+
+    <ListView
+        android:id="@+id/money_income_lv"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/money_top_bar"
+        android:visibility="gone"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp" />
+
+</RelativeLayout>

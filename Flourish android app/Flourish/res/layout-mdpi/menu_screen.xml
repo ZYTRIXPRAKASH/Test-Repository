@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/menu_rl"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/side_layout_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/slideout">
+
+        <Button
+            android:id="@+id/flourish_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/flourish_icon"
+            android:paddingTop="52dp"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/dashboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/flourish_icon"
+            android:background="@drawable/dashboard_selector" />
+
+        <Button
+            android:id="@+id/contacts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dashboard"
+            android:background="@drawable/contacts_selector" />
+
+        <Button
+            android:id="@+id/sales"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/contacts"
+            android:background="@drawable/sales_selector" />
+
+        <Button
+            android:id="@+id/inventory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sales"
+            android:background="@drawable/inventory_selector" />
+
+        <Button
+            android:id="@+id/money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/inventory"
+            android:background="@drawable/money_selector" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/main_layout_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:id="@+id/top_bar_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+      
+            android:background="@drawable/topbar" >
+
+            <Button
+                android:id="@+id/menu_slideout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/menu_icon_hover" />
+
+            <TextView
+                android:id="@+id/top_bar_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/contacts"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/top_bar_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/topbar_selector"
+                android:paddingBottom="3dp"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/dashboard_include_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/top_bar_rl"
+      >
+
+            <include layout="@layout/dashboard" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/contacts_include_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/top_bar_rl"
+       
+            android:visibility="gone">
+
+            <include layout="@layout/contacts" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/sales_include_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/top_bar_rl"
+      
+            android:visibility="gone" >
+
+            <include layout="@layout/sales" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/inventory_include_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/top_bar_rl"
+      
+            android:visibility="gone" >
+
+            <include layout="@layout/inventory" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/settings_include_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/top_bar_rl"
+      
+            android:visibility="gone" >
+
+            <include layout="@layout/settings" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/money_include_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/top_bar_rl"
+      
+            android:visibility="gone" >
+
+            <include layout="@layout/money_topbar" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/add_contact_include_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone" >
+
+            <include layout="@layout/add_contacts_dialog" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,74 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="AppTheme" parent="android:Theme.Light" />
+
+    <style name="MenuTheme" parent="android:Theme.NoTitleBar" />
+   <style name="settings_fields_padding">
+       
+     <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+       
+   </style>
+   
+   <style name="sales_invoice_item_fiels_padding">
+       
+       <item name="android:paddingLeft">10dp</item>
+       <item name="android:paddingRight">10dp</item>
+       
+       
+   </style>
+   
+   
+       <!-- this style is used for AddPhotoFrom activity -->
+    
+    <style name="Theme.Transparent" parent="android:Theme">
+		<item name="android:windowBackground">@android:color/transparent</item>
+    	<item name="android:windowIsTranslucent">true</item>
+    	<item name="android:windowContentOverlay">@null</item>
+    	<item name="android:windowNoTitle">true</item>
+    	<item name="android:windowIsFloating">true</item>
+    	<item name="android:backgroundDimEnabled">true</item>
+  	</style>
+   
+   
+  
+    
+    
+    <style name="NewDialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    
+    
+    <style name="ProgressDialogStyle">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTitleStyle">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+    
+    
+    
+    <style name="NewDialogWithMessage">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+    
+    
+    
+    
+    
+    
+    
+    
+</resources>

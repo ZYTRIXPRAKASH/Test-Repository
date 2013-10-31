@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="250dp"
+    android:background="@drawable/contacts_add_bg"
+    android:layout_gravity="bottom" >
+
+    <Button
+        android:textSize="16dp"
+        android:id="@+id/from_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/contacts_add_pop_up"
+        android:text="@string/from_phone"
+        android:textStyle="bold" />
+
+    <Button
+        android:textSize="16dp"
+        android:id="@+id/manually"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/from_phone"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/contacts_add_pop_up"
+        android:text="@string/manually"
+        android:textStyle="bold" />
+
+    <Button
+        android:textSize="16dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/manually"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/contacts_cancel_pop_up"
+        android:text="@string/cancel"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+
+</RelativeLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/contacts_main_rl"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background" >
+
+    <ListView
+        android:id="@+id/contacts_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="#00000000"
+        android:fastScrollEnabled="true"
+        android:layout_marginTop="40dp" >
+    </ListView>
+    
+     <include
+        android:id="@+id/search_bar_layout"
+        layout="@layout/search_bar"
+        android:layout_above="@id/contacts_listview" />
+
+</RelativeLayout>

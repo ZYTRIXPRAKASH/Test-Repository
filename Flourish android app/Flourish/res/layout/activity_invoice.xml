@@ -1,0 +1,391 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/create_invoice_top_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+      
+        
+         >
+         
+        
+        <include layout="@layout/activity_topbar"/>
+        
+
+       <!--  <Button
+            android:id="@+id/create_invoice_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/back_selector" />
+
+        <TextView
+            android:id="@+id/invoice_invoice_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/invoice"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" /> -->
+    </RelativeLayout>
+
+    <!-- layout body -->
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+           <RelativeLayout
+                android:id="@+id/add_invoice_fields"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/create_invoice_top_bar"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="30dp" >
+
+                <RelativeLayout
+                    android:id="@+id/add_invoice_rl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/login1" >
+
+                    <EditText
+                        android:id="@+id/create_invoice_customer_et"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="5dp"
+                        android:background="@null"
+                        android:editable="false"
+                        android:hint="@string/customer"
+                        android:maxLength="40"
+                        android:paddingLeft="5dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/add_invoice_date_rll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/add_invoice_rl"
+                    android:background="@drawable/login2" >
+
+                    <EditText
+                        android:id="@+id/create_invoice_date_et"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="5dp"
+                        android:background="@null"
+                        android:editable="false"
+                        android:hint="@string/date_string"
+                        android:paddingLeft="5dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/create_invoice_calendar_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/dateicon" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/add_invoice_type_rl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/add_invoice_date_rll"
+                    android:background="@drawable/login3" >
+
+                    <TextView
+                        android:id="@+id/create_invoice_type_et"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="5dp"
+                        android:background="@null"
+                        android:hint="@string/invoice_type"
+                        android:paddingLeft="5dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/add_invoice_booking_rl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/add_invoice_type_rl"
+                    android:background="@drawable/login3"
+                    android:visibility="gone" >
+
+                    <EditText
+                        android:id="@+id/add_invoice_booking_et"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="5dp"
+                        android:background="@null"
+                        android:hint="@string/booking"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </RelativeLayout> 
+            
+            
+            <LinearLayout 
+                
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="20dp"
+                android:background="@drawable/layout_boarder"
+                >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+                
+                
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+" />
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+            
+            
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/invoice_discount_tv"
+                    android:layout_width="fill_parent"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Invoice Discount" />
+
+                <EditText
+                    android:id="@+id/invoice_discount_et"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                       android:inputType="number"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+         
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_margin="5dp"
+             
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/invoice_discount_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Tax after discount" />
+
+                <Button
+                    android:id="@+id/invoice_tax_ofter_discount_switch_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/off"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+   
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_margin="5dp"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Tax shipping" />
+
+                <Button
+                    android:id="@+id/invoice_taxshiping_switch_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/off"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+         
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_margin="5dp"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Mark items Deliverd" />
+
+                <Button
+                    android:id="@+id/invoice_mark_items_delevered_switch_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/off"
+                    android:singleLine="true" />
+            </LinearLayout>
+            
+            
+            
+            </LinearLayout>
+            
+            
+
+            
+
+            <!-- botton linear layout -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/layout_boarder"
+                android:orientation="vertical" >
+            
+                <LinearLayout
+                android:layout_width="fill_parent"
+                   android:background="#ffddee"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/invoice_total_discount"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Tax after discount" />
+                <Button
+                    android:id="@+id/invoice_percentage_dalor_switch_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$"
+                    android:padding="5dp"
+                    android:textStyle="bold"
+                    android:singleLine="true" />
+
+                <EditText
+                    android:id="@+id/invoice_total_discount_et"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="number"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                       android:background="#858585"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/invoice_discount_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                     android:padding="10dp"
+                        android:text="Shipping" />
+
+                    <TextView
+                        android:id="@+id/invoice_shipping_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$0.00"
+                         android:textStyle="bold"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <!--  -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:padding="10dp"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Tax:($0.00 X 50.000%)" />
+
+                    <TextView
+                        android:id="@+id/invoice_tax_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$0.00"
+                          android:textStyle="bold"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <!--  -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:padding="10dp"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/invoice_discount_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Tax after discount" />
+
+                    <TextView
+                        android:id="@+id/invoice_total_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$0.00"
+                        android:singleLine="true" />
+                </LinearLayout>
+                <!-- end of bottam layout -->
+                
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- ending of layout body -->
+
+    </ScrollView>
+
+</LinearLayout>

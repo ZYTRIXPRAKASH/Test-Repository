@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/main_bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/activity_topbar" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/swaptabbg"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/swip_selected"
+            android:text="Swipe"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:id="@+id/swipe_card_btn"
+            android:textStyle="bold" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/key_bg"
+            android:text="Key In"
+            android:id="@+id/key_in_card_btn"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    
+    <LinearLayout 
+         android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/deviceStatus_notConnected_ll"
+        android:visibility="visible"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/swipe_device_bg"
+        android:layout_margin="20dp"
+     
+        
+        >
+    
+        
+        
+        
+        
+        <TextView 
+         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/connect_card_text_size"
+        android:text="@string/connect_card_reader"
+        android:layout_gravity="center"
+        android:textColor="#000000"
+  
+            
+            />
+        
+          <TextView 
+         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/connect_card_description_text_size"
+        android:text="@string/connect_card_description"
+        android:layout_gravity="center"
+  
+    android:gravity="center"
+            
+            
+            
+            />
+        
+        
+        
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/swipingimage" />
+    
+    </LinearLayout>
+    
+    
+    
+     <LinearLayout 
+         android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/deviceStatus_Connected_ll"
+        android:orientation="vertical"
+        android:background="@drawable/swipe_device_bg"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        
+        >
+    
+         
+        <!--  <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/waiting_card_swipe" /> -->
+        
+        
+                
+        <TextView 
+         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/connect_card_text_size"
+        android:text="@string/awaiting_card"
+        android:layout_gravity="center"
+        android:textColor="#000000"
+  
+            
+            />
+        
+          <TextView 
+         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/connect_card_description_text_size"
+        android:text="@string/awaiting_card_description"
+        android:layout_gravity="center"
+  
+    android:gravity="center"
+            
+            
+            
+            />
+        
+        
+        
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/swipingimage" />
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+    </LinearLayout>
+
+</LinearLayout>
+
+
+<!--
+
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearlayout_main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        
+        android:visibility="visible"
+        
+        
+        
+        >
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#000000" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0" >
+
+                <TextView
+                    android:id="@+id/textview_app_status"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FF0000"
+                    android:gravity="center"
+                    android:paddingLeft="4px"
+                    android:paddingRight="4px"
+                    android:textColor="#000000" >
+                </TextView>
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textview_title_status"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textSize="1px" >
+            </TextView>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/textview_info"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:textColor="#000000" />
+            </LinearLayout>
+        </TableRow>
+    </TableLayout>
+
+    <EditText
+        android:id="@+id/edittext_carddata"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:focusable="false"
+        android:gravity="top|left"
+        android:inputType="textMultiLine" 
+        android:visibility="gone"
+        
+        >
+
+        <requestFocus>
+        </requestFocus>
+    </EditText>
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="20px" >
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="1px"
+                    android:layout_weight="1.0"
+                    android:gravity="center" >
+
+                    <CheckBox
+                        android:id="@+id/checkbox_getconfig"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="left|center_vertical"
+                        android:text="Get Configuration From Server"
+                        android:visibility="gone"
+                        android:textColor="#000000" />
+                </LinearLayout>
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="1px"
+                    android:layout_weight="1.0"
+                    android:visibility="gone"
+                    android:gravity="center" >
+
+                    <ImageButton
+                        android:id="@+id/imagebutton_submit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/sb_g" />
+
+                    <ImageButton
+                        android:id="@+id/imagebutton_clear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cb_r" >
+                    </ImageButton>
+                </LinearLayout>
+            </LinearLayout>
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>
+-->

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<Devices>
+    <Configuration>
+      <Model>DROID RAZR XT910</Model>
+      <Device></Device>
+      <Data>INPUT_SAMPLE_RATE_IN_HZ = 48000</Data>
+    </Configuration>
+    <Configuration>
+      <Model>DROIDX</Model>
+      <Device></Device>
+      <Data>INPUT_SAMPLE_RATE_IN_HZ = 32000,LOWER_SYNC_SAMPLE_LIMIT = 18,LOWER_3BIT_LIMIT = 2,UPPER_3BIT_LIMIT = 15,SAMPLES_PER_BIT = 4,HALF_BIT_LIMIT = 2,</Data>
+    </Configuration>
+</Devices>

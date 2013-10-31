@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background" >
+
+    <RelativeLayout
+        android:id="@+id/contact_edit_top_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/topbar" >
+
+        <Button
+            android:id="@+id/contact_edit_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/back_selector" />
+
+        <TextView
+            android:id="@+id/contact_edit_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/edit_contact"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/contact_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/topbar_selector"
+            android:gravity="center"
+            android:text="@string/save"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:paddingBottom="3dp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/contact_edit_top_bar"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/contact_edit_add1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/plus_selector"
+                android:visibility="invisible" />
+
+            <RelativeLayout
+                android:id="@+id/contact_edit_names_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/contact_edit_add1"
+                android:background="@drawable/table_shape" >
+
+                <EditText
+                    android:id="@+id/contact_edit_first_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_margin="5dp"
+                    android:background="@null"
+                    android:hint="@string/first_name"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/contact_edit_first_name"
+                    android:background="@drawable/line" />
+
+                <EditText
+                    android:id="@+id/contact_edit_last_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/view1"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:hint="@string/last_name"
+                    android:padding="5dp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/contact_edit_email_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/contact_edit_names_rl"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/contact_edit_add_email"
+                android:text="@string/email"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/contact_edit_add_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/contact_edit_email_text"
+                android:background="@drawable/plus_selector"
+                android:visibility="invisible" />
+
+            <RelativeLayout
+                android:id="@+id/contact_edit_email_rl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/contact_edit_email_text"
+                android:layout_margin="5dp"
+                android:layout_toRightOf="@id/contact_edit_add_email" >
+
+                <LinearLayout
+                    android:id="@+id/contact_edit_email_list"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_shape"
+                    android:orientation="vertical" />
+
+                <RelativeLayout
+                    android:id="@+id/contact_edit_email_et_rl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_shape"
+                    android:visibility="gone" >
+
+                    <EditText
+                        android:id="@+id/contact_edit_email_et"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="@string/email_address"
+                        android:inputType="textEmailAddress"
+                        android:textStyle="bold"
+                        android:padding="5dp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/contact_edit_phone_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/contact_edit_email_rl"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/contact_edit_add_phone"
+                android:text="@string/phone"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/contact_edit_add_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/contact_edit_phone_text"
+                android:background="@drawable/plus_selector"
+                android:visibility="invisible" />
+
+            <RelativeLayout
+                android:id="@+id/contact_edit_phone_rl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/contact_edit_phone_text"
+                android:layout_margin="5dp"
+                android:layout_toRightOf="@id/contact_edit_add_phone" >
+
+                <LinearLayout
+                    android:id="@+id/contact_edit_phone_list"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_shape"
+                    android:orientation="vertical" />
+
+                <RelativeLayout
+                    android:id="@+id/contact_edit_phone_et_rl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_shape"
+                    android:visibility="gone" >
+
+                    <EditText
+                        android:id="@+id/contact_edit_phone_et"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="@string/phone_number"
+                        android:padding="5dp"
+                        android:textStyle="bold"
+                        android:inputType="phone" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/contact_edit_address_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/contact_edit_phone_rl"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/contact_edit_add_address"
+                android:text="@string/address"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/contact_edit_add_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/contact_edit_address_text"
+                android:background="@drawable/plus_selector" />
+
+            <RelativeLayout
+                android:id="@+id/contact_edit_address_list"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/contact_edit_address_text"
+                android:layout_margin="5dp"
+                android:layout_toRightOf="@id/contact_edit_add_address"
+                android:background="@drawable/table_shape"
+                android:orientation="vertical" >
+
+                <EditText
+                    android:id="@+id/contact_edit_address_street1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@null"
+                    android:hint="@string/street1"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/address_view1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/contact_edit_address_street1"
+                    android:background="@drawable/line" />
+
+                <EditText
+                    android:id="@+id/contact_edit_address_street2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/address_view1"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5dp"
+                    android:background="@null"
+                    android:hint="@string/street2"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/address_view2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/contact_edit_address_street2"
+                    android:background="@drawable/line" />
+
+                <EditText
+                    android:id="@+id/contact_edit_address_city"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/address_view2"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5dp"
+                    android:background="@null"
+                    android:hint="@string/city"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/address_view3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/contact_edit_address_city"
+                    android:background="@drawable/line" />
+
+                <EditText
+                    android:id="@+id/contact_edit_address_state"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/address_view3"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5dp"
+                    android:background="@null"
+                    android:hint="@string/state"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/address_view4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/contact_edit_address_state"
+                    android:background="@drawable/line" />
+
+                <EditText
+                    android:id="@+id/contact_edit_address_zipcode"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/address_view4"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5dp"
+                    android:background="@null"
+                    android:hint="@string/zipcode"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/address_view5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/contact_edit_address_zipcode"
+                    android:background="@drawable/line" />
+
+                <EditText
+                    android:id="@+id/contact_edit_address_country"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/address_view5"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5dp"
+                    android:background="@null"
+                    android:hint="@string/country"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/contact_edit_birth_date_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/contact_edit_address_list"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/contact_edit_add_birth_date"
+                android:text="@string/birth_date_text"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/contact_edit_add_birth_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/contact_edit_birth_date_text"
+                android:background="@drawable/plus_selector"
+                android:visibility="invisible" />
+
+            <RelativeLayout
+                android:id="@+id/contact_edit_birth_date_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/contact_edit_birth_date_text"
+                android:layout_margin="5dp"
+                android:layout_toRightOf="@id/contact_edit_add_birth_date"
+                android:background="@drawable/table_shape"
+                android:orientation="vertical" >
+
+                <EditText
+                    android:id="@+id/contact_edit_birth_date_et"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@null"
+                    android:editable="false"
+                    android:hint="@string/birth_date"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/contact_edit_birth_date_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/dateicon" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/contact_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/contact_edit_birth_date_rl"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                android:background="@drawable/delete_contacts_selector"
+                android:text="@string/delete_contact"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <DatePicker
+        android:id="@+id/contact_edit_dpResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible" />
+
+</RelativeLayout>

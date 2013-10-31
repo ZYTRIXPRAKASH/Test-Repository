@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sales_rl"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/main_bg" >
+    
+    <RelativeLayout
+        android:id="@+id/sales_top_green_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"    
+        android:background="@drawable/topbar" >
+
+        <Button
+            android:id="@+id/sales_back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/back_selector" />
+
+        <TextView
+            android:id="@+id/sales_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/sales"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        
+        <Button
+            android:id="@+id/add_sales_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/topbar_selector"
+            android:text="@string/edit"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:paddingBottom="3dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/sales_top_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sales_top_green_bar"
+        android:background="@drawable/money_top_bg" >
+
+        <LinearLayout
+            android:id="@+id/sales_top_bar_rl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:background="@drawable/top_grey_first_selected" >
+
+            <Button
+                android:id="@+id/sales_invoice_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/invoice"
+                android:textColor="#ffffff"
+                android:background="@null"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp" />
+
+            <Button
+                android:id="@+id/sales_payments_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/sales_invoice_btn"
+                android:text="@string/payments"
+                android:textColor="#425e86"
+                android:background="@null"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp" />
+
+            <Button
+                android:id="@+id/sales_deliveries_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/sales_payments_btn"
+                android:layout_marginLeft="15dp"
+                android:text="@string/deliveries"
+                android:textColor="#425e86"
+                android:background="@null"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+    
+   
+    
+    <RelativeLayout
+            android:id="@+id/sales_invoice_include_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sales_top_bar"
+            android:visibility="visible" >
+
+            <include layout="@layout/sales_invoice_layout" />
+            
+        </RelativeLayout>
+    
+        
+    <RelativeLayout
+            android:id="@+id/sales_payments_include_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sales_top_bar"
+            android:visibility="gone" >
+
+            <include layout="@layout/sales_payments_layout" />
+            
+        </RelativeLayout>
+        
+    <RelativeLayout
+            android:id="@+id/sales_deliveries_include_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sales_top_bar"
+            android:visibility="gone" >
+
+            <include layout="@layout/sales_deliveries_layout" />
+            
+            
+            
+        </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,9 @@
+<resources>
+
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_medium">16dp</dimen>
+    <dimen name="padding_large">16dp</dimen>
+     <dimen name="connect_card_text_size">40dp</dimen>
+      <dimen name="connect_card_description_text_size">25dp</dimen>
+
+</resources>

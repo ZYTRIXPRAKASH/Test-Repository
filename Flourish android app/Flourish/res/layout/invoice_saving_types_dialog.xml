@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+      style="@android:style/Theme.Translucent.NoTitleBar"
+   android:gravity="bottom"
+    android:orientation="vertical" >
+   
+    <LinearLayout
+        
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+      
+        android:background="@drawable/save_bg"
+        android:paddingTop="40dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="10dp"
+        
+       
+        
+        
+         >
+        
+        <Button 
+            
+                android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/save_as_draft_btn"
+        android:text="Save as Draft"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:background="@drawable/save_draft_btn"
+            android:layout_marginTop="5dp"
+            
+            
+            />
+        
+          <Button 
+            
+                android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/create_invoice_btn"
+        android:text="Create Invoice"
+        android:textSize="18dp"
+         android:background="@drawable/save_draft_btn"
+        android:textStyle="bold"
+             android:layout_marginTop="2dp"
+            
+            
+            />
+          <Button 
+            
+                android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/create_and_payment_btn"
+        android:text="Create and Payment"
+        android:textSize="18dp"
+         android:background="@drawable/save_draft_btn"
+        android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            
+            
+            />
+        
+             <Button 
+            
+                android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/create_and_add_delevery_btn"
+        android:text="Create and Add Delivery"
+        android:textSize="18dp"
+        android:textStyle="bold"
+         android:background="@drawable/save_draft_btn"
+            android:layout_marginTop="5dp"
+            
+            
+            />
+             
+             
+                <Button 
+            
+                android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cancel_saveing_incoice_btn"
+        android:text="Cancel"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:background="@drawable/save_cancel_btn"
+            
+            android:layout_marginTop="5dp"
+            
+            />
+        
+    </LinearLayout>
+    
+    
+    
+
+</LinearLayout>

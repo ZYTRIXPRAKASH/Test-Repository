@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_margin="10dp"
+    android:fadingEdge="none" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:id="@+id/sales_invoice_layout_topbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sales_view_top">
+
+            <ImageView
+                android:id="@+id/sales_invoice_paid_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:contentDescription="@string/invoice_amount_status"
+                android:src="@drawable/unpaid" />
+
+            <RelativeLayout
+                android:id="@+id/sales_invoice_number_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sales_invoice_paid_status" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="Customer" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true" 
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:id="@+id/sales_invoice_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/invoice_number" />
+
+                    <TextView
+                        android:id="@+id/sales_invoice_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/sales_invoice_tv"
+                        android:layout_marginLeft="2dp"
+                        android:text="25" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/sales_invoice_name_date_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sales_invoice_number_rl" 
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:id="@+id/sales_invoice_person_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="Danny Dinges" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true" 
+                    android:layout_marginRight="10dp">
+
+                    <TextView
+                        android:id="@+id/sales_invoice_date_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/date" />
+
+                    <TextView
+                        android:id="@+id/sales_invoice_date_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/sales_invoice_date_tv"
+                        android:layout_marginLeft="2dp"
+                        android:text=" 3/7/2013" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/sales_invoice_type_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sales_invoice_name_date_rl" 
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:id="@+id/sales_invoice_street1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="3006 37 Ave SW" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true" 
+                    android:layout_marginRight="10dp">
+
+                    <TextView
+                        android:id="@+id/sales_invoice_type_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/type" />
+
+                    <TextView
+                        android:id="@+id/sales_invoice_type_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/sales_invoice_type_tv"
+                        android:layout_marginLeft="2dp"
+                        android:text="Sale" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/sales_invoice_street2_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sales_invoice_type_rl" 
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:id="@+id/sales_invoice_street2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="Seattle, WQ 98126" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/sales_invoice_line_list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sales_invoice_layout_topbar"
+            android:background="@drawable/line_item_white"
+            android:orientation="vertical" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sales_invoice_line_list"
+            android:background="@drawable/sales_view_bottom" >
+
+            <RelativeLayout
+                android:id="@+id/subtotal_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="right" >
+
+                <TextView
+                    android:id="@+id/subtotal_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/subtotal" />
+
+                <TextView
+                    android:id="@+id/subtotal_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/subtotal_tv"
+                    android:layout_marginLeft="5dp"
+                    android:text="$31.84" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/invoice_discount_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/subtotal_rl"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="right" >
+
+                <TextView
+                    android:id="@+id/invoice_discount_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sales_invoice_discount" />
+
+                <TextView
+                    android:id="@+id/invoice_discount_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/invoice_discount_tv"
+                    android:layout_marginLeft="5dp"
+                    android:text="$5.00" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/shipping_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/invoice_discount_rl"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="right" >
+
+                <TextView
+                    android:id="@+id/shipping_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sales_shipping" />
+
+                <TextView
+                    android:id="@+id/shipping_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/shipping_tv"
+                    android:layout_marginLeft="5dp"
+                    android:text="$3.50" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/sales_tax_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/shipping_rl"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="right" >
+
+                <TextView
+                    android:id="@+id/sales_tax_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sales_tax" />
+
+                <TextView
+                    android:id="@+id/sales_tax_calc_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/sales_tax_tv"
+                    android:text="($5.00 * 8.600%) : " />
+
+                <TextView
+                    android:id="@+id/sales_tax_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/sales_tax_calc_value"
+                    android:layout_marginLeft="5dp"
+                    android:text="$2.53" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/total_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sales_tax_rl"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="right" >
+
+                <TextView
+                    android:id="@+id/total_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sales_total" />
+
+                <TextView
+                    android:id="@+id/total_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/total_tv"
+                    android:layout_marginLeft="5dp"
+                    android:text="$32.94" 
+                    android:textStyle="bold"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,116 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+     android:id="@+id/main_layout_id"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+       
+       android:id="@+id/menuListLayout_ll"
+        android:background="#858585" >
+        
+        
+        <Button 
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+        
+            android:layout_weight="1"
+            android:background="@drawable/flourish_icon"
+         
+      
+            
+            
+            
+            />
+        
+        
+        <Button 
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+        
+            android:layout_weight="1"
+            android:background="@drawable/dashboard"
+         
+            android:id="@+id/DashBoard_btn"
+            
+            
+            
+            />
+        
+        
+        <Button 
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+           android:background="@drawable/contacts"
+        android:layout_weight="1"
+            android:id="@+id/Contacts_btn"
+            
+            
+            
+            />
+        
+         <Button 
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+         android:background="@drawable/sales"
+            android:layout_weight="1"
+            android:id="@+id/Sales_btn"
+            
+            
+            
+            />
+        
+        
+        
+              <Button 
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+              android:background="@drawable/inventory"
+            android:layout_weight="1"
+            android:id="@+id/Inventory_btn"
+            
+            
+            
+            />
+        
+              <Button 
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/money"
+            android:layout_weight="1"
+            android:id="@+id/Money_btn"
+            
+            
+            
+            />
+        
+        
+        
+       
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:id="@+id/mDetailsLisstLinearLyout"
+        
+         >
+
+        <include layout="@layout/main_topbar" />
+
+        <fragment
+            android:id="@+id/MainDetailsFragment"
+            android:layout_width="fill_parent"
+            class="com.flourish.DashBoardFragment"
+            android:layout_height="fill_parent" />
+    </LinearLayout>
+
+</LinearLayout>

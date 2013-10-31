@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background"
+    
+    
+    >
+ 
+      <RelativeLayout
+        android:id="@+id/add_payment_fields"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/create_payment_top_bar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="30dp">
+        
+          <RelativeLayout
+            android:id="@+id/paymenttype_rll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login1" >
+
+           <TextView
+                android:id="@+id/add_payment_type_tv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dp"
+                android:singleLine="true"
+                android:text="Propay"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+          
+          
+          
+
+        <RelativeLayout
+            android:id="@+id/add_payment_date_rll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/paymenttype_rll"
+            android:background="@drawable/login2" >
+
+            <EditText
+                android:id="@+id/add_sales_payment_date_et"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dp"
+                android:background="@null"
+               
+                android:singleLine="true"
+                android:text="@string/payment_date"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/payment_date_calander_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/dateicon" />
+        </RelativeLayout>
+
+        
+        <RelativeLayout
+            android:id="@+id/add_payment_CardNumber_rl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/add_payment_date_rll"
+            android:background="@drawable/login2">
+
+            <EditText
+                android:id="@+id/add_payment_Propay_CardNumber_et"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dp"
+                android:background="@null"
+                android:singleLine="true"
+                android:hint="@string/cardNumber"
+                android:maxLength="16"
+                android:inputType="number"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+        </RelativeLayout>
+        
+        
+        <RelativeLayout
+            android:id="@+id/add_payment_CardExperiDate_rl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+        android:layout_below="@+id/add_payment_CardNumber_rl"
+            android:background="@drawable/login2">
+
+            <EditText
+                android:id="@+id/add_payment_Propay_CardExperiDate_et"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dp"
+                android:background="@null"
+                android:hint="@string/Expiration_Date"
+                android:inputType="date"
+                android:maxLength="5"
+                android:singleLine="true"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+        
+        
+        
+        
+        
+           
+    <RelativeLayout
+            android:id="@+id/zip_code_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/add_payment_CardExperiDate_rl"
+            android:background="@drawable/login2">
+            
+          <EditText
+                android:id="@+id/add_payment_zipcode_et"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dp"
+                android:background="@null"
+                android:singleLine="true"
+                android:maxLength="8"
+                android:inputType="numberDecimal"
+                android:hint="@string/zipCode"
+                android:textColor="#000000"
+                android:textStyle="bold" 
+                
+                />
+        
+
+            
+        </RelativeLayout>
+        
+        
+        
+        
+
+    <RelativeLayout
+            android:id="@+id/add_payment_amount_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/zip_code_rl"
+            android:background="@drawable/login3" >
+
+            <EditText
+                android:id="@+id/add_payment_amount_et"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dp"
+                android:background="@null"
+                android:singleLine="true"
+                android:maxLength="8"
+                android:inputType="numberDecimal"
+                android:hint="@string/amount"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+        </RelativeLayout>
+        
+ 
+    
+    
+    
+    
+    </RelativeLayout>
+    
+      
+      
+   <Button
+     
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/add_payment_fields"
+        android:background="@drawable/processpaymentbutton"
+        android:layout_margin="10dp"
+        android:id="@+id/processPayment_btn"
+        
+        
+        />   
+      
+
+
+</RelativeLayout>

@@ -1,0 +1,182 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical" >
+
+    <include layout="@layout/settings_topbar" 
+        android:layout_marginBottom="20dp"
+        
+        />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal" 
+            android:background="@drawable/login1"
+            style="@style/settings_fields_padding"
+        
+            
+            >
+       
+	
+
+	
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_weight="1"
+                 android:background="@null"
+                 android:singleLine="true"
+             
+                 android:layout_gravity="center"
+                 android:hint="Propay_Email"
+                 android:editable="false"
+              
+                android:layout_height="wrap_content"
+                
+                
+                 />
+            
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_weight="1"
+                 android:background="@null"
+                 android:singleLine="true"
+                 android:id="@+id/propay_email_et"
+                 android:layout_gravity="center"
+                 android:paddingLeft="5dp"
+               android:gravity="right"
+                android:layout_height="wrap_content" />
+            
+            
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/login2"
+          android:gravity="center"
+          style="@style/settings_fields_padding"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+         android:textStyle="bold"
+                android:hint="Tax Rate" />  
+                
+            
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tax_rate_tv"
+         android:textColor="@color/black_color"
+         android:textStyle="bold"
+         android:layout_weight="1"
+         android:background="@null"
+         android:paddingRight="5dp"
+         android:gravity="right"
+         android:singleLine="true"
+       android:inputType="number"
+       android:maxLength="3"
+                android:text="8.5" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tax_rate_tv"
+         android:textColor="@color/black_color"
+         android:textStyle="bold"
+       
+                android:text="%" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+                      android:background="@drawable/login2"
+                      android:layout_gravity="center"
+                      style="@style/settings_fields_padding"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:hint="AlwaysDeliverInvoices" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/AlwaysDeliverInvoices_tbtn"
+                android:background="@drawable/off"
+               
+               
+                
+                 />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+               android:gravity="center"
+               style="@style/settings_fields_padding"
+                  android:background="@drawable/login3"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:hint="Tax Shaipping " />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Tax_Shaipping_tbtn_settings"
+                android:textStyle="bold"
+                   android:background="@drawable/off"
+               
+                
+                 />
+            
+        </LinearLayout>
+    </LinearLayout>
+    
+    
+         <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                  android:layout_margin="10dp"
+                  android:background="@drawable/sign_in_button"
+               android:id="@+id/logout_btn"
+                android:text="@string/logout" />
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+</LinearLayout>

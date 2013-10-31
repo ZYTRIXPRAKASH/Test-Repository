@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/sales_deliveries_undelivered_items_row_rl"
+        android:layout_width="fill_parent"
+      
+        
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"> 
+        
+        
+        
+        <LinearLayout 
+            
+             android:layout_width="fill_parent"
+             android:layout_weight="2"
+            android:layout_height="wrap_content"
+            >
+
+        <CheckBox
+            android:id="@+id/sales_undelivered_check_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:button="@drawable/undelivered_radio_selector"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:textOff=""
+            android:textOn="" />
+
+        <TextView
+            android:id="@+id/sales_deliveries_undelivered_item_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/sales_undelivered_check_button"
+            android:text="Face Cream"
+            android:textStyle="bold"
+            android:textColor="#474747" />
+        
+        </LinearLayout>
+        
+      
+        
+          
+        
+        
+        <LinearLayout
+             android:layout_width="fill_parent"
+             android:layout_weight="4"
+             android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            
+            
+             >
+        
+            <View 
+                
+                android:layout_height="50dp"
+                android:layout_width="1dp"
+                android:background="#858585"
+                
+                
+                
+                />
+            
+            
+
+        <EditText
+            android:id="@+id/sales_deliveries_undelivered_item_quantity_et"
+            android:layout_width="fill_parent"
+           
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+             android:layout_marginTop="15dp"
+           
+        android:background="@null"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="0" />
+        
+        </LinearLayout>
+        
+    </LinearLayout>
+    
+     <View 
+                
+                android:layout_height="1dp"
+                android:layout_width="fill_parent"
+                android:background="#858585"
+                
+                
+                
+                />
+    
+    
+</LinearLayout>

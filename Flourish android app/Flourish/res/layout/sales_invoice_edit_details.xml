@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background" >
+
+    <RelativeLayout
+        android:id="@+id/sales_details_top_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/topbar" >
+
+        <Button
+            android:id="@+id/sales_details_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/back_selector" />
+
+        <TextView
+            android:id="@+id/sales_details_invoice_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/invoice"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/sales_details_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/topbar_selector"
+            android:paddingBottom="3dp"
+            android:text="@string/save"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sales_details_top_bar"
+        android:layout_margin="5dp" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:id="@+id/sales_details_fields"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+             
+               
+                
+                
+                >
+
+                <RelativeLayout
+                    android:id="@+id/sales_details_customer_rl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                        android:background="@drawable/login1"
+                    android:layout_marginTop="10dp" >
+
+                    <EditText
+                        android:id="@+id/sales_details_customer_et"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                       android:background="@null"
+                        android:focusable="false"
+                        android:hint="@string/customer"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        
+                    
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/sales_details_date_rl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sales_details_customer_rl"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:background="@drawable/login2"
+                 
+                
+                   
+                   
+                    
+                     >
+
+                    
+                    <LinearLayout     android:layout_width="fill_parent"
+                        android:gravity="center"
+                        android:layout_height="wrap_content" >
+                    
+                    
+                    <EditText
+                        android:id="@+id/sales_details_date_et"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@null"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:hint="@string/date"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:layout_weight="1"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/sales_details_calendar_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                
+                      android:layout_gravity="center"
+                      android:layout_marginRight="20dp"
+                   
+                        android:background="@drawable/dateicon" />
+                    
+                    </LinearLayout>
+                    
+                    
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/sales_details_type_rl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sales_details_date_rl"
+                      android:layout_marginLeft="10dp"
+                        android:background="@drawable/login2"
+                   
+                    
+                     >
+
+                    <TextView
+                        android:id="@+id/sales_details_invoice_type_et"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="5dp"
+                        android:background="@null"
+                        android:hint="@string/invoice_type"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+                
+       <RelativeLayout
+            android:id="@+id/add_invoice_booking_rl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+                android:background="@drawable/login3"
+                 android:layout_marginLeft="10dp"
+            android:layout_below="@id/sales_details_type_rl"
+           
+            android:visibility="visible">
+
+            <EditText
+                android:id="@+id/add_invoice_booking_et"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dp"
+                android:background="@null"
+                android:singleLine="true"
+                android:hint="TEST"
+                android:focusable="false"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+        </RelativeLayout>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/sales_invoice_item_list"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sales_details_fields"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical" />
+
+            <RelativeLayout
+                android:id="@+id/sales_details_add_line_item_fields"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sales_invoice_item_list"
+                android:layout_margin="10dp" >
+
+                <Button
+                    android:id="@+id/sales_details_add_line_item_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/plus_selector" />
+
+                <RelativeLayout
+                    android:id="@+id/sales_details_rl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/sales_details_add_line_item_btn"
+                    android:background="@drawable/table_shape" >
+
+                    <EditText
+                        android:id="@+id/sales_details_add_line_item_et"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@null"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:hint="@string/add_line_item"
+                        android:maxLines="1"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="4dip"
+                        android:paddingRight="4dip"
+                        android:paddingTop="10dp"
+                        android:singleLine="true"
+                        android:textSize="15sp" />
+
+                    <ImageButton
+                        android:id="@+id/sales_details__add_line_item_button_search"
+                        style="@android:style/Widget.Button.Inset"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="4dp"
+                        android:background="@drawable/ic_menu_search"
+                        android:contentDescription="@string/searchname" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/invoice_tax_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sales_details_add_line_item_fields"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+               
+                
+                >
+
+                <LinearLayout
+                    android:id="@+id/invoice_discount1_rl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/login1"
+                    android:gravity="center" >
+
+                    <TextView
+                        android:id="@+id/invoice_discount1_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/invoice_discount" />
+
+                    <TextView
+                        android:id="@+id/invoice_discount1_value_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+  
+                       android:layout_weight="1"
+                   
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                      
+                        android:textColor="#000000"
+                        android:imeOptions="actionDone"
+                        android:text="0.0"
+                              android:layout_gravity="center"
+                        android:textSize="18dp"
+                        android:gravity="right"
+                        android:layout_marginRight="20dp"
+                                        
+                        android:textStyle="bold" />
+                    
+         
+                    
+                    
+                    <EditText
+                        android:id="@+id/invoice_discount1_value_et"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+  
+                       android:layout_weight="1"
+                        android:layout_marginRight="20dp"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:background="@null"
+                        android:textColor="#000000"
+                        android:imeOptions="actionDone"
+                        android:text="0.0"
+                        android:gravity="right"          
+                        android:visibility="gone"            
+                        android:textStyle="bold" />
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/tax_after_discount_rl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/invoice_discount1_rl"
+                    android:background="@drawable/login2" >
+
+                    <TextView
+                        android:id="@+id/tax_after_discount_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/tax_after_discount" />
+
+                    <Button
+                        android:id="@+id/tax_after_discount_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:padding="5dp"
+                        android:background="@drawable/off"
+                        android:paddingBottom="10dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/tax_shipping_rl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tax_after_discount_rl"
+                    android:background="@drawable/login2" >
+
+                    <TextView
+                        android:id="@+id/tax_shipping_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/tax_shipping" />
+
+                    <Button
+                        android:id="@+id/tax_shipping_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/off"
+                        android:padding="5dp"
+                        android:paddingBottom="10dp" />
+                    
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/mark_items_delivered_rl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tax_shipping_rl"
+                    android:background="@drawable/login3" >
+
+                    <TextView
+                        android:id="@+id/mark_items_delivered_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/mark_items_delivered" />
+
+                    <Button
+                        android:id="@+id/mark_items_delivered_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/off"
+                        android:padding="5dp"
+                        android:paddingBottom="10dp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/invoice_total_rl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/invoice_tax_rl"
+                android:layout_margin="10dp" >
+
+                <RelativeLayout
+                    android:id="@+id/invoice_discount2_rl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/login1" >
+
+                    <TextView
+                        android:id="@+id/invoice_discount2_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/invoice_discount" />
+
+                    <ToggleButton
+                        android:id="@+id/dollar_percentage_toggle_button"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_toRightOf="@id/invoice_discount2_tv"
+                        android:layout_marginLeft="10dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/percent_dollar_selector"
+                        android:textOff=""
+                        android:textOn="" />
+
+                    <TextView
+                        android:id="@+id/invoice_discount2_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:textColor="#000000" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/shipping_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/invoice_discount2_rl"
+                    android:background="@drawable/login2" >
+
+                    <TextView
+                        android:id="@+id/shipping_tv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:text="@string/shipping" />
+
+                    <EditText
+                        android:id="@+id/shipping_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:textColor="#000000"
+                        android:maxLength="8"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        
+                        android:hint=" "
+                        android:layout_gravity="center"
+                        android:gravity="left"
+                        android:maxLines="1"
+                        android:background="@null"
+                        android:paddingLeft="10dp"
+                        android:textStyle="bold"
+                        
+                         />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/tax_rl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/shipping_rl"
+                    android:background="@drawable/login2" >
+
+                    <TextView
+                        android:id="@+id/tax_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/tax" />
+
+                    <TextView
+                        android:id="@+id/tax_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:textColor="#000000" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/total_rl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tax_rl"
+                    android:background="@drawable/login3" >
+
+                    <TextView
+                        android:id="@+id/total_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/total" />
+
+                    <TextView
+                        android:id="@+id/total_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/sales_details_delete_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/invoice_total_rl"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/delete_contacts_selector"
+                android:text="@string/delete_invoice"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <DatePicker
+        android:id="@+id/sales_details_dpResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible" />
+
+</RelativeLayout>
